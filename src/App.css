@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: #121212;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 80px;
+  background: #181818;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.sidebar .menu p {
+  color: white;
+  margin: 8px 0;
+  cursor: pointer;
+}
+.artist-pic img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+.artist-pic img:hover {
+  box-shadow: 0 0 10px #1ed760;
+}
+
+/* Playlist */
+.track-card {
+  background: #282828;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.track-card:hover {
+  background: #1ed7601a;
+}
+.track-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.track-card .info {
+  text-align: left;
+  margin-top: 5px;
+}
+.track-card .info p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* NowPlaying */
+.nowplaying {
+  padding: 20px;
+  background: #181818;
+  text-align: center;
+}
+.album-large {
+  width: 220px;
+  border-radius: 8px;
+}
+.np-info h3 {
+  margin: 10px 0 5px;
+}
+
+/* PlayerBar */
+.playerbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.playerbar .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.playerbar .thumb {
+  width: 55px;
+  border-radius: 6px;
+}
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.progress {
+  flex: 1;
+  height: 5px;
+  background: #535353;
+  border-radius: 4px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #1db954, #1ed760);
+  border-radius: 4px;
+}

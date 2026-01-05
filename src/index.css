@@ -1,0 +1,129 @@
+/* src/index.css (replace) */
+:root{
+  --black: #000000;
+  --panel: #050405;
+  --muted: #9b8fc7;
+  --accent-green: #1DB954;
+  --accent-purple: #8b5cf6; /* purple hover */
+  --heart: #ff5c77;
+  --glass: rgba(255,255,255,0.02);
+}
+
+/* base */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0; font-family:Inter, system-ui, sans-serif; background:var(--black); color:#fff;}
+
+.app{display:flex; height:100vh; gap:12px; padding:12px;}
+.sidebar{width:17%; min-width:160px; max-width:240px; padding:12px; overflow:auto; background:transparent;}
+.main{flex:1; padding:12px 18px; overflow:auto; background:transparent;}
+
+/* topbar */
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px;}
+.search{flex:1; max-width:520px; display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:10px;}
+.search input{flex:1; background:transparent; border:none; outline:none; color:inherit; font-size:14px}
+
+/* album grid center */
+.album-grid-wrapper{display:flex; justify-content:center;}
+.album-grid{width:100%; max-width:1100px; display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:18px; align-items:start;}
+.album-tile{background:var(--panel); padding:10px; border-radius:10px; transition: transform .12s, box-shadow .14s, border-color .12s; border:2px solid transparent;}
+.album-cover{width:100%; height:220px; border-radius:8px; object-fit:cover; display:block;}
+.album-tile:hover{ transform:translateY(-6px); box-shadow:0 20px 50px rgba(139,92,246,0.08); border-color:var(--accent-purple); }
+.album-title{margin-top:10px; font-weight:700}
+.album-artist{font-size:13px; color:var(--muted)}
+
+/* artist column */
+.artists-column{display:flex; flex-direction:column; gap:10px; margin-top:8px;}
+.artist-circle{width:56px; height:56px; border-radius:50%; overflow:hidden; border:2px solid transparent; margin:6px 0; cursor:pointer;}
+.artist-circle:hover{ border-color:var(--accent-green); box-shadow: 0 8px 30px rgba(29,185,84,0.06); }
+
+/* song-row (kept for modal list) */
+.song-row{display:flex; align-items:center; gap:12px; padding:10px; border-radius:10px;}
+
+/* playerbar */
+.playerbar{position:fixed; left:12px; right:12px; bottom:12px; height:92px; padding:12px; border-radius:12px; background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,1)); display:flex; align-items:center; gap:18px;}
+.player-controls{display:flex; gap:10px; align-items:center;}
+.progress{flex:1; display:flex; align-items:center; gap:8px;}
+.progress input[type="range"]{width:100%}
+
+/* small */
+.btn{padding:6px 8px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:inherit; cursor:pointer; display:inline-flex; align-items:center;}
+.small{font-size:13px; color:var(--muted)}
+
+/* placeholder */
+.img-fallback{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:12px;}
+/* src/index.css - final mm style */
+:root{
+  --black:#000000;
+  --panel:#050405;
+  --muted:#9b8fc7;
+  --accent-purple:#8b5cf6;
+  --accent-green:#1db954;
+  --heart:#ff5c77;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter, system-ui, sans-serif;background:var(--black);color:#fff;}
+.app{display:flex;height:100vh;gap:12px;padding:12px;}
+.sidebar{width:120px;min-width:110px;padding:12px;overflow:auto;}
+.main{flex:1;padding:12px 18px;overflow:auto;}
+.right-area{width:340px;padding:12px;}
+
+/* top */
+.top-area{display:flex;align-items:center;justify-content:flex-start;padding-bottom:8px;}
+
+/* album grid */
+.album-grid-wrapper{display:flex;justify-content:center;}
+.album-grid{width:100%;max-width:1100px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;align-items:start;}
+.album-tile{background:var(--panel);padding:10px;border-radius:10px;transition:transform .12s,box-shadow .14s,border-color .12s;border:2px solid transparent;cursor:pointer;}
+.album-cover{width:100%;height:220px;border-radius:8px;object-fit:cover;display:block;}
+.album-tile:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(139,92,246,0.08);border-color:var(--accent-purple);}
+.album-title{margin-top:10px;font-weight:700}
+.album-artist{font-size:13px;color:var(--muted)}
+
+/* playerbar */
+.playerbar{position:fixed;left:12px;right:12px;bottom:12px;height:92px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(0,0,0,0.95),rgba(0,0,0,1));display:flex;align-items:center;gap:18px;}
+.player-controls{display:flex;gap:10px;align-items:center;}
+.progress{flex:1;display:flex;align-items:center;gap:8px;}
+.progress input[type="range"]{width:100%}
+
+/* sidebar artists */
+.artist-list{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+.artist-circle{width:56px;height:56px;border-radius:50%;overflow:hidden;border:2px solid transparent;cursor:pointer;}
+.artist-circle:hover{border-color:var(--accent-green);box-shadow:0 8px 30px rgba(29,185,84,0.06);}
+
+/* queue panel */
+.queue-panel{background:var(--panel);padding:12px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.6);max-height:70vh;overflow:auto;}
+.btn{padding:6px 8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:8px;}
+.search-input{width:480px;background:rgba(255,255,255,0.02);border-radius:10px;padding:8px 12px;border:none;color:inherit;outline:none;}
+/* album popup & like button */
+.like-btn{ background: rgba(0,0,0,0.45); border-radius:8px; padding:6px; border:none; cursor:pointer; color:#fff; }
+.album-popup { padding:12px; }
+/* base background + no black band */
+body, #root { height: 100%; margin: 0; }
+body { background: linear-gradient(180deg, #030003 0%, #000 100%); color: #fff; }
+
+/* featured slider */
+.featured-slider { overflow-x: auto; white-space: nowrap; padding-bottom: 8px; }
+
+/* albums grid responsive */
+.album-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 1200px) {
+  .album-grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* left artist column keep narrow */
+.sidebar { width: 120px; min-width: 110px; }
+
+/* album tile hover color */
+.album-tile:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(139,92,246,0.06); border-color: #8b5cf6; }
+
+/* Album popup sizing */
+.album-popup-panel img { border-radius: 12px; }
+
+/* search + topbar spacing */
+.topbar { padding: 12px 18px; display:flex; align-items:center; justify-content:space-between; }
